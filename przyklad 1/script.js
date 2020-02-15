@@ -39,7 +39,8 @@ function update(){
     }
 }
 
-// funkcja rysująca kwadrat
+// funkcja rysująca kwadrat - jaka jest różnica między taką deklaracją funkcji (wyrażenie funkcyjne)
+// a sposobem dla funkcji start()/stop()/update() ?
 const rysuj_kwadrat = function() {
 
     // obliczenia
