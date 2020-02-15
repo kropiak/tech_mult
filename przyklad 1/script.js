@@ -1,7 +1,7 @@
 // inicjalizacja potrzebnych zmiennych
 const plotno = document.getElementById("plotno");
 const ctx = plotno.getContext("2d");
-const kwadrat = { a:20, x:10, y:10 };
+const kwadrat = { a:20, x:10, y:10, dx:1 };
 const pause_button = document.querySelector("#pause_button");
 let isRunning = false;
 
@@ -44,7 +44,18 @@ function update(){
 const rysuj_kwadrat = function() {
 
     // obliczenia
-    kwadrat.x+=1;
+    // trzeba zaimplementować "odbijanie się od krawędzi"
+    // sprawdzamy czy przesunięcie kwadratu o kolejny krok nie przesunie go poza obszar płótna
+    // załóżmy na razie, że tylko w poziomie
+    // do kwadratu zostala dodana kolejna zmienna dx, która przechowuje wartość zmiany pozycji na osi x
+
+    if(kwadrat.dx > 0 && (kwadrat.x+kwadrat.dx + kwadrat.a) > plotno.width){
+        kwadrat.dx = -1;
+    }
+    else if(kwadrat.dx < 0 && (kwadrat.x+kwadrat.dx < 0)){
+        kwadrat.dx = 1;
+    }
+    kwadrat.x+=kwadrat.dx;
 
     // czyścimy płótno
     ctx.clearRect(0, 0, plotno.width, plotno.height);
