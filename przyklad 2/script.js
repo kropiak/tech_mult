@@ -60,7 +60,7 @@ class Bar {
         this.x = 10;
         // tutaj powinno byc bardziej uniwersalne rozwiązanie, np. klasa wykres z parametrami swojego położenia
         this.y = plotno.height-10;
-        this.dx = 3;
+        this.dx = 7;
         this.color = color;
         this.height = 0;
         this.width = width;
@@ -88,8 +88,8 @@ class Bar {
     // prywatne składowe klasy rozpoczynamy nazwy od _
     _update(){
         // jeżeli jesteśmy już blisko docelowej wysokości - zwalniamy szybkość rysowania słupka
-        if((this.height / this.target_height > 0.8) && this.dx > 1){
-            this.dx--;
+        if((this.height / this.target_height > 0.7) && this.dx > 1){
+            this.dx-=0.3;
         }
         if(this.height < this.target_height){
             this.height+=this.dx;
