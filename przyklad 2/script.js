@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function start(){
     isRunning = true;
-    // dodajemy nowy słupek
-    // trzeba w jakiś sposób określić ich odstępy
+    // resetowanie tablicy słupków
+    // zmienna spacing służy do przesuwania kolejnych słupków poziomie, tak aby były odstępy między nimi
     bars = [];
     let spacing = 0;
     data.forEach(element => {
@@ -60,7 +60,8 @@ class Bar {
         this.x = 10;
         // tutaj powinno byc bardziej uniwersalne rozwiązanie, np. klasa wykres z parametrami swojego położenia
         this.y = plotno.height-10;
-        this.dx = 7;
+        // zmiana wysokości słupka na klatkę (lub pojedyncze wywołanie metody _update)
+        this.dy = 7;
         this.color = color;
         this.height = 0;
         this.width = width;
@@ -74,9 +75,11 @@ class Bar {
         
         // kod rysujący
         ctx.fillStyle = this.color;
+        //pamiętajmy o domyślnej orientacji współrzędnych płótna i położeniu punktu (0,0)
         ctx.fillRect(this.x, this.y, this.width, -this.height);
         ctx.fillStyle = '#000';
         ctx.font = "20px Georgia";
+        // etykieta 5px ponad słupkiem
         ctx.fillText(this.label,this.x, this.y-this.height-5);
         this._update();
     }
@@ -85,16 +88,19 @@ class Bar {
     // wersja ES2019 wprowadziła prywatne pola i metody klasy. Należy wtedy rozpoczać nazwę od znaku #
     // np. #update
     // jeżeli nie ma możliwości użyć tej wersji możemy skorzystać z konwencji, w której aby wskazać 
-    // prywatne składowe klasy rozpoczynamy nazwy od _
+    // prywatne składowe klasy rozpoczynamy nazwy od _, jednak to tylko informacja dla innych użytkowników
+    // naszego kodu a nie faktyczna zmiana dostępu do składowej
     _update(){
         // jeżeli jesteśmy już blisko docelowej wysokości - zwalniamy szybkość rysowania słupka
-        if((this.height / this.target_height > 0.7) && this.dx > 1){
-            this.dx-=0.3;
+        // #TODO tu dla lepszego efektu można zastosować funkcję kwadratową a nie liniową
+        if((this.height / this.target_height > 0.7) && this.dy > 1){
+            this.dy-=0.3;
         }
         if(this.height < this.target_height){
-            this.height+=this.dx;
+            this.height+=this.dy;
         }
-        // narysowany
+        // narysowany - można wykorzystać do wykonania jakichś czynności, jeżeli słupek lub wszystkie
+        // słupki są już w pełni narysowane
         else{
             this.isDrawn = true;
         }
