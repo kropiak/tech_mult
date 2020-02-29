@@ -20,7 +20,7 @@ Przypomnij sobie zadanie z laboratorium 4, w którym należało przygotować sł
 
 __Zadanie 5__
 
-Stwórz element `<texarea>`, przycisk oraz element `<div>`. Po kliknięciu przycisku wstawiaj zawartość `<textarea>` do elementu `<div>`. To może być również HTML.
+Stwórz element `<textarea>`, przycisk oraz element `<div>`. Po kliknięciu przycisku wstawiaj zawartość `<textarea>` do elementu `<div>`. To może być również HTML.
 
 __Zadanie 6__
 
@@ -39,4 +39,4 @@ __zadanie 10 *__
 
 Wykonaj ćwiczenia z [tego adresu](https://www.w3schools.com/jquery/jquery_exercises.asp) i sprawdź swoją wiedzę w Quzie [tu](https://www.w3schools.com/jquery/jquery_quiz.asp).
 
-* tych rozwiązań nie trzeba już umieszczać w swoim repozytorium
+\* tych rozwiązań nie trzeba już umieszczać w swoim repozytorium
