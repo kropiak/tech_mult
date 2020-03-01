@@ -18,30 +18,58 @@ __Zadanie 4__
 
 Przypomnij sobie zadanie z laboratorium 4, w którym należało przygotować słupek wykresu, który miał się "animować" określoną ilość sekund (od 1 do 10). Wykonaj teraz to zadania korzystając z jQuery - również input typu number z wartościami 1-10 do zmiany czasu trwania animacji.
 
+Podpowiedzi:
+* funkcja `animate()`
+
 __Zadanie 5__
 
 Stwórz element `<textarea>`, przycisk oraz element `<div>`. Po kliknięciu przycisku wstawiaj zawartość `<textarea>` do elementu `<div>`. To może być również HTML.
+
+Podpowiedzi:
+* funckcja `val()`
+
 
 __Zadanie 6__
 
 Do poprzedniego zadania dodaj kod, który będzie umożliwiał wpisanie maksymalnie 200 znaków w polu `<textarea>`. Wyświetlaj też ilość znaków jaka została jeszcze do wpisania.
 
+Podpowiedzi:
+* funkcja `text()`
+* funckcja `val()`
+
 __Zadanie 7__
 
-Dodaj kontener 500x500 px, w którym umieść 3 elementy `<div>` o rozmiarach 100x100 px, które domyślnie znajdują się w kolumnie wyrównane do lewej strony kontenera. Dodaj przycisk, po kliknięciu którego kwadraty po kolei przesuną się płynnie do prawej krawędzi kontenera jeden po drugim, ale nie jednocześnie. Ponowne kliknięcie przesuwa je do lewej krawędzie itd.
+Dodaj kontener 500x500 px, w którym umieść 3 elementy `<div>` o rozmiarach 100x100 px, które domyślnie znajdują się w kolumnie wyrównane do lewej strony kontenera. Dodaj przycisk, po kliknięciu którego kwadraty po kolei przesuną się płynnie do prawej krawędzi kontenera jeden po drugim, ale nie jednocześnie. Ponowne kliknięcie przesuwa je do lewej krawędzi itd.
+
+Podpowiedzi:
+* funkcja `delay()`
+* `$(selektor).each(function() {});`
+* funkcja `animate()`
 
 __Zadanie 8__
 
 Wykorzystaj kontener z elementami z zadania 7 i dodaj następującą funkcjonalność:
-* po najechaniu na którykolwiek box w kontenerze pojawia się dodatkowy element, którego kliknięcie przeniesie element o jedną pozycję wyżej lub niżej.
+* po najechaniu na którykolwiek box w kontenerze pojawia się dodatkowy element (mogą to być strzałki góra/dół, napis lub cos innego), którego kliknięcie przeniesie element o jedną pozycję wyżej lub niżej.
+
+Podpowiedzi:
+* `$(selektor).prev();`
+* `$(selektor).next();`
+* funkcja `insertAfter()`
+* funkcja `insertBefore()`
+
+
 
 __Zadanie 9__
 
 Stwórz dokument HTML a w nim:
 * pole tekstowe
 * element blokowy ala baner, w którym będzie pojawiał się tekst wpisywany w polu tekstowym (po wpisaniu każdego kolejnego znaku)
-* przycisk, po kliknięciu którego uruchomi się animacja banera polegająca na tym, że napis się powiększa i zmienia swoją przezroczystaość do 100%, 
-* po zakończeniu animacji, tekst pola jest kasowany i baner przywracany do stanu początkowego
+* przycisk, po kliknięciu którego uruchomi się animacja banera polegająca na tym, że napis się powiększa i zmienia swoją przezroczystość do 100%, 
+* po zakończeniu animacji, tekst pola jest kasowany i baner przywracany do stanu początkowego.
+
+Podpwowiedzi:
+* `$(selektor).keyup()`
+* `animate()`
 
 __zadanie 10 *__
 
