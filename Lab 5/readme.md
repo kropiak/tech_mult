@@ -35,6 +35,14 @@ __Zadanie 8__
 Wykorzystaj kontener z elementami z zadania 7 i dodaj następującą funkcjonalność:
 * po najechaniu na którykolwiek box w kontenerze pojawia się dodatkowy element, którego kliknięcie przeniesie element o jedną pozycję wyżej lub niżej.
 
+__Zadanie 9__
+
+Stwórz dokument HTML a w nim:
+* pole tekstowe
+* element blokowy ala baner, w którym będzie pojawiał się tekst wpisywany w polu tekstowym (po wpisaniu każdego kolejnego znaku)
+* przycisk, po kliknięciu którego uruchomi się animacja banera polegająca na tym, że napis się powiększa i zmienia swoją przezroczystaość do 100%, 
+* po zakończeniu animacji, tekst pola jest kasowany i baner przywracany do stanu początkowego
+
 __zadanie 10 *__
 
 Wykonaj ćwiczenia z [tego adresu](https://www.w3schools.com/jquery/jquery_exercises.asp) i sprawdź swoją wiedzę w Quzie [tu](https://www.w3schools.com/jquery/jquery_quiz.asp).
