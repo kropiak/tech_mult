@@ -14,6 +14,10 @@ __Zadanie 3__
 
 Zmodyfikuj kod z zadania 2 tak, żeby podzielić górny panel na 3 klikalne części (coś jak menu poziome) oraz 3 panele, które się wysuwają poniżej. Ważne jest również, aby pozostałe panele się chowały.
 
+* funkcja `each()`
+* funkcja `index()`
+* selektory CSS do pobierania wszystkich elementów potomnych/potomnych danej klasy, sprawdź [tu](http://www.kurshtml.edu.pl/css/selektory.html)
+
 __Zadanie 4__
 
 Przypomnij sobie zadanie z laboratorium 4, w którym należało przygotować słupek wykresu, który miał się "animować" określoną ilość sekund (od 1 do 10). Wykonaj teraz to zadania korzystając z jQuery - również input typu number z wartościami 1-10 do zmiany czasu trwania animacji.
@@ -26,7 +30,7 @@ __Zadanie 5__
 Stwórz element `<textarea>`, przycisk oraz element `<div>`. Po kliknięciu przycisku wstawiaj zawartość `<textarea>` do elementu `<div>`. To może być również HTML.
 
 Podpowiedzi:
-* funckcja `val()`
+* funkcja `val()`
 
 
 __Zadanie 6__
@@ -35,7 +39,7 @@ Do poprzedniego zadania dodaj kod, który będzie umożliwiał wpisanie maksymal
 
 Podpowiedzi:
 * funkcja `text()`
-* funckcja `val()`
+* funkcja `val()`
 
 __Zadanie 7__
 
@@ -65,11 +69,12 @@ Stwórz dokument HTML a w nim:
 * pole tekstowe
 * element blokowy ala baner, w którym będzie pojawiał się tekst wpisywany w polu tekstowym (po wpisaniu każdego kolejnego znaku)
 * przycisk, po kliknięciu którego uruchomi się animacja banera polegająca na tym, że napis się powiększa i zmienia swoją przezroczystość do 100%, 
-* po zakończeniu animacji, tekst pola jest kasowany i baner przywracany do stanu początkowego.
+* po zakończeniu animacji, tekst pola jest kasowany i baner przywracany do stanu początkowego (czyli bez tekstu).
 
 Podpwowiedzi:
 * `$(selektor).keyup()`
 * `animate()`
+* funkcja `fadeOut()` + callback (czyli funkcja wywoływana po zakończeniu animacji/efektu)
 
 __zadanie 10 *__
 
